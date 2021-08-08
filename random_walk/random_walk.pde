@@ -13,7 +13,7 @@ class Walker {
     x = width/2;
     y = height/2;
     step_size = _step_size;
-    strokeWeight(step_size/2);
+    strokeWeight(step_size);
   }
   
   void display() {
