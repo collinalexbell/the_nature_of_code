@@ -1,7 +1,7 @@
 
 class Walker {
-  int x;
-  int y;
+  float x;
+  float y;
   int step_size = 1;
  
   Walker() {
@@ -13,7 +13,7 @@ class Walker {
     x = width/2;
     y = height/2;
     step_size = _step_size;
-    strokeWeight(step_size);
+    strokeWeight(3 * step_size / 4);
   }
   
   void display() {
@@ -22,16 +22,10 @@ class Walker {
   }
   
   void step() {
-    int choice = int(random(4));
-    if (choice == 0) {
-      x += step_size;
-    } else if (choice == 1) {
-      x -= step_size;
-    } else if (choice == 2) {
-      y += step_size;
-    } else {
-      y -= step_size;
-    } 
+    float dx = random(-1, 1) * step_size;
+    float dy = random(-1, 1) * step_size;
+    x += dx;
+    y += dy;
   }
 }
 
@@ -39,7 +33,7 @@ Walker w;
 
 void setup() {
    size(1080, 720);
-   w = new Walker(10);
+   w = new Walker(7);
 }
 
 void draw() {
