@@ -1,0 +1,4 @@
+# put this into your .bashrc so you can run the sketches from cmdline
+alias pjava='processing-java --sketch=$PWD --run
+
+
